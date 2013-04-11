@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@android:color/white">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Январь 2013"
+            android:id="@+id/month_title" android:layout_gravity="center" android:textColor="@android:color/black"
+            android:textSize="28sp" android:textStyle="bold" android:layout_marginTop="5dp"
+            android:layout_weight="0"/>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_weight="0.1">
+        <com.funnycodes.android.SJCalendar.HorizontalPager
+                android:id="@+id/horizontal_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:layout_weight="1">
+        </com.funnycodes.android.SJCalendar.HorizontalPager>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="10dp" android:layout_weight="0">
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="120dp" android:background="@drawable/panel_selectable" android:id="@+id/details_panel"
+            android:clickable="true" android:focusable="false" android:focusableInTouchMode="false">
+        <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:stretchColumns="0,1,2" android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp" android:layout_marginLeft="20dp" android:layout_marginBottom="10dp">
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Январь"
+                        android:id="@+id/details_month_name" android:textSize="16sp"
+                        android:textColor="@color/text_orange" android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="календ."
+                        android:id="@+id/textView" android:textColor="@android:color/black" android:textSize="12sp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="рабочих"
+                        android:id="@+id/textView1" android:textColor="@android:color/black" android:textSize="12sp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="вых./праздн."
+                        android:id="@+id/textView2" android:textColor="@android:color/black" android:textSize="12sp"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/calend" android:textColor="@android:color/black" android:textSize="18sp"
+                        android:textStyle="bold"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/work" android:textColor="@android:color/black" android:textSize="18sp"
+                        android:textStyle="bold"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dayoff" android:textColor="@android:color/black" android:textSize="18sp"
+                        android:textStyle="bold"/>
+            </TableRow>
+            <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/tableRow"
+                    >
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="40-час. нед." android:id="@+id/textView6" android:textColor="@android:color/black"
+                          android:textSize="12sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="36-час. нед" android:id="@+id/textView7" android:textColor="@android:color/black"
+                          android:textSize="12sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="24-час. нед." android:id="@+id/textView8" android:textColor="@android:color/black"
+                          android:textSize="12sp"/>
+            </TableRow>
+            <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent"
+                      android:id="@+id/tableRow1" android:layout_weight="1">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/day40hr" android:textColor="@android:color/black"
+                          android:textSize="18sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/day36hr"
+                          android:textColor="@android:color/black" android:textSize="18sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/day24hr"
+                          android:textColor="@android:color/black" android:textSize="18sp" android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="60dp"
+                    android:background="@color/panel_bg" android:id="@+id/relativeLayout">
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:id="@+id/imageView2"
+                android:src="@drawable/thin_div" android:scaleType="fitXY" android:layout_alignParentTop="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 квартал, 1 полугодие 2013 г."
+                android:id="@+id/navi_text" android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" android:layout_alignRight="@+id/imageView2"
+                android:layout_margin="20dp" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="@color/text_orange"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/info_btn"
+                android:src="@drawable/info_btn_selector" android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" android:layout_marginRight="20dp" android:clickable="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="52dp" android:background="@android:color/white"
+                    android:id="@+id/relativeLayout1">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView" android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+                android:src="@drawable/logo" android:layout_marginLeft="20dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1" android:layout_toRightOf="@+id/imageView"
+                android:layout_centerVertical="true" android:src="@drawable/ribbon"
+                android:layout_alignParentRight="true" android:scaleType="fitXY" android:layout_marginLeft="5dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3" android:layout_toRightOf="@+id/imageView"
+                android:layout_above="@+id/imageView1" android:src="@drawable/slogan" android:layout_marginLeft="5dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
+

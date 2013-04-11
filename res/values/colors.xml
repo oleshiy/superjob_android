@@ -1,0 +1,6 @@
+<resources>
+    <color name="panel_bg">#e7edef</color>
+    <color name="panel_bg_on">#bec7ca</color>
+    <color name="text_orange">#df5912</color>
+
+</resources>
